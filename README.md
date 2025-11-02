@@ -6,24 +6,26 @@ Para esse projeto, além de mudarmos o JSON para o JSON Server, vamos permitir o
 
 ## Informações do trabalho
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome:Gabriel bruno da Cruz
+- Matricula: 897952
+- Proposta de projeto escolhida: Site de informacoes turisticas
+- Breve descrição sobre seu projeto: Site de informacoes sobre os pontos turisticos da cidade mineira de Brumadinho. esse site tem por objetivo ajudar aqueles que se interessem por conhecer a cidade a achar os principais pontos turisticos.
 
 **Print dos testes da API com Postman ou similar**
 
-<< COLOQUE A IMAGEM GET AQUI >>
+![teste metodo get Thunder Client](/public/assets/img/metodoGET.png)
 
-<< COLOQUE A IMAGEM POST AQUI >>
+![teste metodo post Thunder Client](/public/assets/img/metodoPOST.png)
 
-<< COLOQUE A IMAGEM PUT AQUI >>
+![teste metodo put Thunder Client](/public/assets/img/metodoPUT.png)
 
-<< COLOQUE A IMAGEM DELETE AQUI >>
+![teste metodo delete Thunder Client](/public/assets/img/metodoDELETE.png)
 
 **Print da aba NETWORK com requisições Fetch/XHR POST e GET**
 
-<<  COLOQUE A IMAGEM AQUI >>
+![Print aba network](/public/assets/img/printabanetwork.png)
+![Print aba network](/public/assets/img/printabanetwork2.png)
+
 
 ## **Orientações Gerais**
 
