@@ -14,5 +14,37 @@
       "nome": "Usuario Comum",
       "email": "user@abc.com"
     }
+  ],
+  "locais": [
+    {
+      "id": 1,
+      "nome": "Inhotim",
+      "descricao": "O Instituto Inhotim é um dos maiores museus a céu aberto do mundo, localizado em Brumadinho, Minas Gerais. Fundado em 2006, o Inhotim combina arte contemporânea com um jardim botânico exuberante, abrigando uma vasta coleção de obras de artistas renomados internacionalmente. O espaço é conhecido por suas instalações inovadoras, pavilhões arquitetônicos impressionantes e uma diversidade de plantas tropicais e subtropicais. Inhotim é um destino cultural e natural que oferece aos visitantes uma experiência única de imersão na arte e na natureza.",
+      "imagemPrincipal": {
+        "url": "assets/img/inhotimcapa.jpg",
+        "Fonte": "inhotim.org.br"
+      },
+      "Imagens": [
+        "assets/img/inhotimdetalhes1.jpg",
+        "assets/img/inhotimdetalhes2.jpg",
+        "assets/img/inhotim.jpg"
+      ],
+      "Fonte2": "inhotim.org.br"
+    },
+    {
+      "id": 2,
+      "nome": "Museu de Arte Contemporânea",
+      "descricao": "O Museu de Arte Contemporânea de Brumadinho é um espaço dedicado à exposição e promoção da arte contemporânea, localizado na cidade de Brumadinho, Minas Gerais. O museu abriga uma coleção diversificada de obras de artistas nacionais e internacionais, oferecendo aos visitantes a oportunidade de explorar diferentes formas de expressão artística. Com exposições temporárias e permanentes, o museu busca fomentar o diálogo entre a arte e a comunidade local, além de contribuir para o desenvolvimento cultural da região.",
+      "imagemPrincipal": {
+        "url": "assets/img/museudeartecontemporaneobrumaidnhocapa.jpg",
+        "Fonte": "pousadadossonhos.com.br"
+      },
+      "Imagens": [
+        "assets/img/museudeartecontemporaneobrumaindhodetalhes1.jpg",
+        "assets/img/museudeartecontemporaneobrumaindhodetalhes2.jpg",
+        "assets/img/museudeartecontemporaneobrumaindho.jpg"
+      ],
+      "Fonte2": "pousadadossonhos.com.br"
+    }
   ]
 }
