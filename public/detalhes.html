@@ -17,7 +17,8 @@
         <div class="container">
 
             <a class="navbar-brand" href="index.html">
-                <img id="logo-site" src="assets/img/logosite.png" alt="" class="img-fluid h-auto" style="max-width: 150px;">
+                <img id="logo-site" src="assets/img/logosite.png" alt="" class="img-fluid h-auto"
+                    style="max-width: 150px;">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
@@ -44,34 +45,46 @@
         </div>
     </header>
 
-    <div id="tela"></div>
+    <div id ="tela"></div>
+
     <!--Rodape-->
     <footer id="contato" class="bg-primary text-light text-center p-3 mt-5">
         <p>Copyright © 2025 Gabriel Bruno Cruz | Engenharia de Software | 1 Semestre | Contato: brumatrip@gmail.com</p>
     </footer>
 
-    <script src="assets/scripts/app.js"></script>
-
+    <script src="./assets/scripts/app.js"></script>
+    
     <script>
         const params = new URLSearchParams(window.location.search);
-        const id = params.get('id');
-        const lugar = lugares.find(l => l.id == id);
-        if (lugar) {
-            document.getElementById('tela').innerHTML = `
-                <h2 class=" titulo-detalhes mb-3 text-center">${lugar.nome}</h2>
-                <img src="${lugar.imagemPrincipal.url}" class="img-principal mb-3 d-block mx-auto rounded shadow" alt="${lugar.nome}">
-                <p class="fonte-imagem text-center fst-italic mb-4">Fonte da imagem: ${lugar.imagemPrincipal.Fonte}</p>
-                <p class="descricao-detalhes text-center fs-5">${lugar.descricao}</p>
+        const id = urlparams.get('id');
+        const tela = document.getElementById("tela");
+        const API_URL = "http://localhost:3000/pontos";
+
+        async function carregarDetalhes() {
+            try {
+                const resposta = await fetch($, { API_URL } / $, { id });
+                if (!resposta.ok) throw new Error("Lugar não encontrado");
+                const ponto = await resposta.json();
+
+                
+                tela.innerHTML = `
+                <h2 class=" titulo-detalhes mb-3 text-center">${ponto.nome}</h2>
+                <img src="${ponto.imagemPrincipal.url}" class="img-principal mb-3 d-block mx-auto rounded shadow" alt="${ponto.nome}">
+                <p class="fonte-imagem text-center fst-italic mb-4">Fonte da imagem: ${ponto.imagemPrincipal.Fonte}</p>
+                <p class="descricao-detalhes text-center fs-5">${ponto.descricao}</p>
                 <div class=" galeria d-flex justify-content-center flex-wrap gap-3 mt-4">
-                    ${lugar.Imagens.map(img => `<img src="${img}" class="img-secundaria rounded shadow-sm" alt=" "
+                    ${ponto.Imagens.map(img => `<img src="${img}" class="img-secundaria rounded shadow-sm" alt=" "
                     width="300" height="300">`).join('')}
                 </div>
-                <p class="fonte-imagem text-center fst-italic mt-3">Fonte: ${lugar.Fonte2}</p>
+                <p class="fonte-imagem text-center fst-italic mt-3">Fonte: ${ponto.Fonte2}</p>
+          
             `;
-        } else {
-            document.getElementById('tela').innerHTML = `<p>Lugar não encontrado.</p>`;
+            } catch (erro) {
+                tela.innerHTML = <p class="text-center text-danger mt-5">Erro: ${erro.message}</p>;
+            }
         }
 
+        carregarDetalhes();
     </script>
 
 </body>
